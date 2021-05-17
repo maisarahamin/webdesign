@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="papar();">Popup</button>
+
+    <script>
+        //MAISARAH BINTI MOHD AMIN
+
+        function papar() {
+            let pilihan = confirm('Adakah anda ingin paparkan nama sendiri?');
+            if (pilihan == true) {
+                nama = prompt("Siapa nama kamu?", "Nama");
+                if (nama == null || nama == "") {
+                    alert('Kenapa tak jawab');
+                } else {
+                    alert(nama);
+                }
+            }
+            else {
+                alert("Terima Kasih");
+            }
+        }
+    </script>
+</body>
+
+</html>
