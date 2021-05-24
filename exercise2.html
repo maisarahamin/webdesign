@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DDT6A MAISARAH BT MOHD AMIN</h1>
+    <p id="demo"></p>
+
+    <script>
+        var text = "";
+        var namahari = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
+        for (var i = 0; i <= 6; i++) {
+            text += namahari[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        namahari.sort();
+
+
+    </script>
+</body>
+
+</html>

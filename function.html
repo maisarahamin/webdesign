@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DDT6A MAISARAH BT MOHD AMIN</h1>
+<label>Poskod : </label><br><br>
+<input type="text" onkeyup="poskod(this.value)" /><br><br>
+<label>Bandar : </label><br><br>
+<div id="bandar"></div>
+<br><br>
+<label>Jabatan : </label><br><br>
+<div id="jabatan"></div>
+<br><br>
+<select onchange="jabatan(this.value)">
+    <option value=""></option>
+    <option value="JTMK">Jabatan Teknologi Maklumat dan Komunikasi</option>
+    <option value="JP">Jabatan Perdagangan</option>
+    <option value="JKE">Jabatan Kejuruteraan Elektrik</option>
+</select>
+<br><br>
+<label>Program : </label><br><br>
+<div id="program"></div>
+<script>
+    function poskod(kod){
+        document.getElementById('bandar').innerHTML = kod;
+        if(kod == "08000"){
+            document.getElementById('bandar').innerHTML = 'SUNGAI PETANI';
+        }
+        else{
+            document.getElementById('bandar').innerHTML ='Luar Kawasan';
+        }
+    }
+    function jabatan(kod) {
+    let program = document.getElementById('program');
+    if (kod === '') {
+        senarai = '';
+    } else {
+        switch (kod) {
+            case 'JTMK':
+                senarai =
+                    '<select>' +
+                    '    <option></option>' +
+                    '    <option>Diploma Teknologi Maklumat (Teknologi Digital)</option>' +
+                    '</select>';
+                break;
+            case 'JP':
+                senarai =
+                    '<select>' +
+                    '    <option></option>' +
+                    '    <option>Diploma Akauntansi</option>' +
+                    '    <option>Diploma Pengajian Perniagaan</option>' +
+                    '    <option>Diploma Sains Kesetiausahaan</option>' +
+                    '</select>';
+                break;
+            case 'JKE':
+                senarai =
+                    '<select>' +
+                    '    <option></option>' +
+                    '    <option>Diploma Kejuruteraan Elektronik (Komputer)</option>' +
+                    '    <option>Diploma Kejuruteraan Elektronik (Komunikasi)</option>' +
+                    '    <option>Diploma Kejuruteraan Elektronik (Optoelektronik)</option>' +
+                    '</select>';
+                break;
+            default:
+                break;
+        }
+    }
+    program.innerHTML = senarai;
+}
+</script>
+    </script>
+</body>
+
+</html>
